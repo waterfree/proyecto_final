@@ -30,7 +30,7 @@ export default function Home() {
 
           if (userValidEmail && userValidPassword) {
             // Redirige a la URL deseada en caso de coincidencia
-            window.location.href = "/";
+            window.location.href = "/Create_user";
           } else {
             // Muestra un mensaje de error en lugar de redirigir
             setInfo("Usuario o contraseña incorrectos");
