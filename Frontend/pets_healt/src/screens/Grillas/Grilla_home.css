@@ -1,0 +1,46 @@
+/* Estilos generales para el contenedor principal */
+#principal {
+  display: grid;
+  grid-template-rows: auto 1fr; /* La primera fila es automática (altura según el contenido), la segunda fila ocupa el 100% restante */
+  /*gap: 10px; /* Espacio entre las filas */
+}
+
+/* Estilos para la barra de navegación (navbar) */
+#navbar {
+  grid-row: 1 / span 1; /* Coloca la barra de navegación en la primera fila */
+  grid-column: 1 / span 2; /* Ocupa dos columnas para extenderse a lo largo de lateral */
+  background-color: #333; /* Color de fondo opcional */
+  color: white; /* Color del texto opcional */
+}
+
+/* Estilos para la aplicación principal (app) */
+#Home {
+  grid-row: 2 / span 1; /* Coloca la aplicación principal en la segunda fila */
+  grid-column: 1 / span 2; /* Ocupa dos columnas para extenderse a lo largo de lateral */
+  /*padding: 20px; /* Espaciado opcional */
+}
+
+/* Estilos para la sección lateral (lateral) */
+#lateral {
+  grid-row: 2 / span 1; /* Coloca la sección lateral en la segunda fila */
+  grid-column: 1 / span 1; /* Ocupa una columna */
+  background-color: #ddd; /* Color de fondo opcional */
+  /*margin-right: 0px; /* Espaciado opcional */
+  /*margin-top: 20px;*/
+}
+
+/* Media query para pantallas más pequeñas (ajusta según tus necesidades) */
+@media screen and (max-width: 768px) {
+  #principal {
+    grid-template-rows: auto auto; /* Cambia a dos filas automáticas en pantallas más pequeñas */
+  }
+
+  #navbar {
+    grid-column: 1 / span 1; /* En pantallas más pequeñas, la barra de navegación ocupa solo una columna */
+  }
+
+  #Home {
+    grid-column: 1 / span 1; /* En pantallas más pequeñas, la aplicación principal ocupa solo una columna */
+  }
+}
+
